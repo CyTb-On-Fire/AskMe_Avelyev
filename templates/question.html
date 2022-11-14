@@ -1,10 +1,121 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "include/base.html" %}
 
-</body>
-</html>
+{% load static %}
+{% block content %}
+
+
+        <div class="question-main mb-5">
+          <div class="row">
+            <div class="col-2">
+              <div class="avatar">
+                <img src="../static/img/avatar-1.jpg" alt=""/>
+              </div>
+                <button class="arrow-buttons mt-3">
+                        <div class="arrow-button arrow-button--t fs-5">↑</div>
+                    </button>
+                    <button class="arrow-buttons mt-3">
+                        <div class="arrow-button arrow-button--t fs-5">↓</div>
+                    </button>
+                    <span class="ms-1">0</span>
+            </div>
+            <div class="col-10">
+              <h2 class="question-title" >Question Header</h2>
+              <div class="question-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, at dicta excepturi nihil nostrum officiis veritatis? Ea illo in ratione!
+              </div>
+                <span class="fw-bold">
+                    Tags:
+                    <a href="" class="text-decoration-none">tag1</a>
+                    <a href="" class="text-decoration-none">tag2</a>
+                </span>
+            </div>
+          </div>
+        </div>
+    <hr>
+        <div class="question">
+          <div class="row">
+            <div class="col-2">
+              <div class="avatar">
+                <img src="../static/img/avatar-2.jpg" alt=""/>
+              </div>
+              <button class="arrow-buttons mt-3">
+                        <div class="arrow-button arrow-button--t fs-5">↑</div>
+                    </button>
+                    <button class="arrow-buttons mt-3">
+                        <div class="arrow-button arrow-button--t fs-5">↓</div>
+                    </button>
+                    <span class="ms-1">0</span>
+            </div>
+            <div class="col-10">
+
+              <div class="question-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, at dicta excepturi nihil nostrum officiis veritatis? Ea illo in ratione!
+              </div>
+                <div class="form-check mt-5">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Correct
+                  </label>
+                </div>
+
+            </div>
+          </div>
+        </div>
+          <div class="question">
+            <div class="row">
+                <div class="col-2">
+                    <div class="avatar">
+                        <img src="../static/img/avatar-2.jpg" alt=""/>
+                    </div>
+                    <button class="arrow-buttons mt-3">
+                        <div class="arrow-button arrow-button--t fs-5">↑</div>
+                    </button>
+                    <button class="arrow-buttons mt-3">
+                        <div class="arrow-button arrow-button--t fs-5">↓</div>
+                    </button>
+                    <span class="ms-1">0</span>
+                </div>
+                <div class="col-10">
+
+                    <div class="question-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, at dicta excepturi nihil nostrum officiis veritatis? Ea illo in ratione!
+                    </div>
+                    <div class="form-check mt-5">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Correct
+                  </label>
+                </div>
+                </div>
+          </div>
+        </div>
+
+          <nav aria-label="...">
+              <ul class="pagination">
+                <li class="page-item disabled">
+                  <span class="page-link">Previous</span>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item active" aria-current="page">
+                  <span class="page-link">2</span>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#">Next</a>
+                </li>
+              </ul>
+            </nav>
+
+    <hr>
+    <div class="input-group has-validation">
+                <textarea class="form-control is-invalid" id="exampleFormControlTextarea1" rows="6" placeholder="Enter your answer"></textarea>
+              <div class="invalid-feedback">
+                Answer can`t be empty
+              </div>
+        <button class="w-100 btn btn-primary btn-lg mt-3" type="submit">Answer</button>
+    </div>
+
+
+
+{% endblock %}
+
