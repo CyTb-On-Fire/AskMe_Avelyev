@@ -1,10 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "include/base.html" %}
 
-</body>
-</html>
+{% load static %}
+
+{% block content %}
+
+    <div class="col-md-7 col-lg-8">
+        <h4 class="mb-3">Log In</h4>
+        <form class="needs-validation" novalidate>
+          <div class="row g-3">
+              <div class="col-12">
+                  <label for="login" class="form-label">Login</label>
+                <input type="text" class="form-control is-invalid" id="login" value="" required>
+                <div class="invalid-feedback">
+                  Incorrect login
+              </div>
+              </div>
+
+
+              <div class="col-12">
+                  <label for="login" class="form-label">Password</label>
+                <input type="password" class="form-control is-invalid" id="login" value="">
+              <div class="invalid-feedback">
+                  Incorrect password
+              </div>
+              </div>
+          </div>
+
+          <button class="w-100 btn btn-primary btn-lg mt-5" type="submit">Register</button>
+        </form>
+      </div>
+
+{% endblock %}
