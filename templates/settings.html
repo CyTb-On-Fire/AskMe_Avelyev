@@ -1,0 +1,48 @@
+{% extends "include/base.html" %}
+
+{% load static %}
+
+{% block content %}
+<div class="col-md-7 col-lg-8">
+        <h4 class="mb-3">Settings: User Name</h4>
+        <form class="needs-validation">
+          <div class="row g-3">
+              <div class="col-12">
+                  <label for="login" class="form-label">Login</label>
+                <input type="text" class="form-control" id="login" value="user_name" required>
+
+              </div>
+
+            <div class="col-12">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="you@example.com" value="user.name@yandex.ru">
+
+            </div>
+
+              <div class="col-12">
+                  <label for="nickname" class="form-label">NickName</label>
+                <input type="text" class="form-control" id="nick" value="User Name" required>
+              </div>
+
+
+
+              <form>
+              <div class="form-group">
+                  <div class="avatar">
+                      <img src="{% static "img/avatar-1.jpg" %}">
+                  </div>
+
+                  <div class="mt-3">
+                      <input type="file" class="form-control-file" id="avatarimg">
+                  </div>
+
+              </div>
+            </form>
+          </div>
+
+
+
+          <button class="w-100 btn btn-primary btn-lg mt-5" type="submit">Register</button>
+        </form>
+      </div>
+{% endblock %}
