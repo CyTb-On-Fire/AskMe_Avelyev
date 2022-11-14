@@ -24,3 +24,41 @@
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+.arrow-button {
+    background-color: transparent;
+
+    height: 12px;
+    width: 12px;
+}
+
+.arrow-button--t {
+    /* Edges */
+
+    transform: translateY(25%) rotate(45deg);
+}
+
+.arrow-button--b {
+    /* Edges */
+
+    transform: translateY(-25%) rotate(45deg);
+}
+
+.avatar-header {
+    width: 80px;
+    height: 80px;
+    border-radius: 10%;
+    overflow: hidden;
+    float: right;
+}
+
+.avatar-header img {
+    max-width: 100%;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.user-header {
+    float: left;
+}

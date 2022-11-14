@@ -1,0 +1,109 @@
+<!doctype html>
+
+{% load static %}
+
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title></title>
+
+
+
+
+
+
+
+<link href="{% static "css/bootstrap.css" %}" rel="stylesheet" >
+
+
+
+
+
+    <!-- Custom styles for this template -->
+    <link href="{% static "css/style.css" %}" rel="stylesheet">
+  </head>
+  <body class="d-flex flex-column h-100">
+
+
+<header class="p-3 text-bg-dark">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <div class="col-3 text-start fw-bold fs-3">
+            <a class="text-light" href="{% url 'index' %}" style="text-decoration: none">AskMe Service</a>
+        </div>
+
+        <div class="col-3 mb-5 mb-lg-0 me-lg-1 text-center">
+          <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
+        </div>
+
+        <div class="me-lg-4">
+            <button type="button" class="btn btn-outline-info">SEARCH</button>
+        </div>
+
+        <div>
+            <button type="button" class="btn btn-success" >ASK</button>
+        </div>
+
+
+        <div class="col-3 ms-auto text-end">
+          <div class="avatar mb-1 ms-auto">
+              <img src="../static/img/avatar-2.jpg" alt="">
+          </div>
+            <div class="ms-1">
+                <p>User Name</p>
+                <span class="mt-1">
+                    <a href="" class="text-warning">settings</a>
+                    <a href="" class="text-warning">log out</a>
+                </span>
+            </div>
+{#          <button type="button" class="btn btn-outline-light me-2">Login</button>#}
+{#          <button type="button" class="btn btn-warning">Sign-up</button>#}
+        </div>
+      </div>
+    </div>
+  </header>
+
+<!-- Begin page content -->
+<main class="flex-shrink-0">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-8">
+          {% block content %}
+          {% endblock %}
+      </div>
+      <div class="col-4">
+        <h2 class="fw-bold fs-2">Top Members</h2>
+          <div class="members">
+            <p>First Member</p>
+              <p>Second Member</p>
+          </div>
+
+        <h2 class="fw-bold fs-3">Popular tags</h2>
+          <div class="tags">
+            <a class="tag">tag1</a>
+            <a class="tag">tag2</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+
+
+<footer class="footer mt-auto py-3 bg-light">
+  <div class="container">
+    <span class="text-muted"></span>
+  </div>
+</footer>
+
+
+
+  </body>
+</html>
+
+
+
+

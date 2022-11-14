@@ -1,66 +1,11 @@
-<!doctype html>
+{% extends "include/base.html" %}
 
 {% load static %}
 
-<html lang="en" class="h-100">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title></title>
-
-
-
-
-
-
-
-<link href="{% static "css/bootstrap.css" %}" rel="stylesheet" >
-
-
-
-
-
-    <!-- Custom styles for this template -->
-    <link href="{% static "css/style.css" %}" rel="stylesheet">
-  </head>
-  <body class="d-flex flex-column h-100">
-
-<header>
-  <!-- Fixed navbar -->
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">QA-service</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
-          </li>
-        </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-      </div>
-    </div>
-  </nav>
-</header>
+{% block content %}
 
 <!-- Begin page content -->
-<main class="flex-shrink-0">
-  <div class="container">
-    <h1>New questions</h1>
-    <div class="row">
-      <div class="col-8">
+
         <div class="question">
           <div class="row">
             <div class="col-2">
@@ -69,10 +14,18 @@
               </div>
             </div>
             <div class="col-10">
-              <h2 class="question-title">Question 1</h2>
+              <h2 class="question-title" ><a href="#">Question 1</a></h2>
               <div class="question-text">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, at dicta excepturi nihil nostrum officiis veritatis? Ea illo in ratione!
               </div>
+                <div class="badge bg-primary text-wrap me-3">
+                    0 answers
+                </div>
+                <span>
+                    Tags:
+                    <a href="" class="text-decoration-none">tag1</a>
+                    <a href="" class="text-decoration-none">tag2</a>
+                </span>
             </div>
           </div>
         </div>
@@ -84,10 +37,19 @@
               </div>
             </div>
             <div class="col-10">
-              <h2 class="question-title">Question 2</h2>
+                <h2 class="question-title" ><a href="#">Question 2</a></h2>
               <div class="question-text">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, at dicta excepturi nihil nostrum officiis veritatis? Ea illo in ratione!
               </div>
+                <div class="badge bg-primary text-wrap me-3">
+                    0 answers
+                </div>
+                <span>
+                    Tags:
+                    <a href="" class="text-decoration-none">tag1</a>
+                    <a href="" class="text-decoration-none">tag2</a>
+                </span>
+
             </div>
           </div>
         </div>
@@ -97,28 +59,52 @@
                     <div class="avatar">
                         <img src="../static/img/avatar-1.jpg" alt=""/>
                     </div>
+                    <button class="arrow-buttons mt-3">
+                        <div class="arrow-button arrow-button--t fs-5">↑</div>
+                    </button>
+                    <button class="arrow-buttons mt-3">
+                        <div class="arrow-button arrow-button--t fs-5">↓</div>
+                    </button>
+                    <span class="ms-1">0</span>
                 </div>
                 <div class="col-10">
-                    <h2 class="question-title">Question 1</h2>
+                    <h2 class="question-title" ><a href="#">Question 3</a></h2>
                     <div class="question-text">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, at dicta excepturi nihil nostrum officiis veritatis? Ea illo in ratione!
                     </div>
+                    <div class="badge bg-primary text-wrap me-3">
+                    0 answers
+                </div>
+                <span>
+                    Tags:
+                    <a href="" class="text-decoration-none">tag1</a>
+                    <a href="" class="text-decoration-none">tag2</a>
+                </span>
                 </div>
           </div>
         </div>
-      </div>
-      <div class="col-4">sidebar</div>
-    </div>
-  </div>
-</main>
+          <nav aria-label="...">
+              <ul class="pagination">
+                <li class="page-item disabled">
+                  <span class="page-link">Previous</span>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item active" aria-current="page">
+                  <span class="page-link">2</span>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#">Next</a>
+                </li>
+              </ul>
+            </nav>
 
-<footer class="footer mt-auto py-3 bg-light">
-  <div class="container">
-    <span class="text-muted"></span>
-  </div>
-</footer>
+{% endblock %}
 
 
 
-  </body>
-</html>
+
+
+
+
+

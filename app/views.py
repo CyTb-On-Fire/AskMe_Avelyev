@@ -7,5 +7,8 @@ def index(request):
     return HttpResponse(render(request, 'index.html'))
 
 
-def question():
-    pass
+def ask(request):
+    return render(request, 'ask.html')
+
+def question(request):
+    return render(request, 'question.html')
