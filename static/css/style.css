@@ -46,17 +46,8 @@
     width: 12px;
 }
 
-.arrow-button--t {
-    /* Edges */
 
-    transform: translateY(25%) rotate(45deg);
-}
 
-.arrow-button--b {
-    /* Edges */
-
-    transform: translateY(-25%) rotate(45deg);
-}
 
 .avatar-header {
     width: 80px;

@@ -35,18 +35,18 @@
         </div>
 
         <div>
-            <button type="button" class="btn btn-success" >ASK</button>
+            <a class="btn btn-success" href="{% url "ask" %}">ASK</a>
         </div>
 
 
         <div class="col-3 ms-auto text-end">
           <div class="avatar mb-1 ms-auto">
-              <img src="../static/img/avatar-2.jpg" alt="">
+              <img src="{% static "img/avatar-2.jpg" %}" alt="">
           </div>
             <div class="ms-1">
                 <p>User Name</p>
                 <span class="mt-1">
-                    <a href="" class="text-warning">settings</a>
+                    <a href="{% url "settings" %}" class="text-warning">settings</a>
                     <a href="" class="text-warning">log out</a>
                 </span>
             </div>
