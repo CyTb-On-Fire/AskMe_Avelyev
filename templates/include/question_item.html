@@ -1,0 +1,34 @@
+{% load static %}
+
+
+<div class="question">
+          <div class="row">
+            <div class="col-2">
+              <div class="avatar">
+                <img src="{% static "img/avatar-1.jpg" %}" alt=""/>
+              </div>
+                <button class="arrow-buttons mt-3">
+                        <div class="fs-5">↑</div>
+                    </button>
+                    <button class="arrow-buttons mt-3">
+                        <div class="fs-5">↓</div>
+                    </button>
+                    <span class="ms-1">{{ question.like_count }}</span>
+            </div>
+            <div class="col-10">
+              <h2 class="question-title" ><a href="{% url 'question' question_id=question.id %}">{{ question.title }}</a></h2>
+              <div class="question-text">
+                  {{ question.text }}
+              </div>
+                <div class="answers-counter badge bg-primary text-wrap me-3">
+                    {{ question.answers_count }} answers
+                </div>
+                <span>
+                    Tags:
+                    <a href="" class="text-decoration-none">tag1</a>
+                    <a href="" class="text-decoration-none">tag2</a>
+                </span>
+            </div>
+          </div>
+        </div>
+

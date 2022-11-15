@@ -1,0 +1,31 @@
+{% load static %}
+
+<div class="question">
+          <div class="row">
+            <div class="col-2">
+              <div class="avatar">
+                <img src="{% static "img/avatar-2.jpg" %}" alt=""/>
+              </div>
+              <button class="arrow-buttons mt-3">
+                        <div class="fs-5">↑</div>
+                    </button>
+                    <button class="arrow-buttons mt-3">
+                        <div class="fs-5">↓</div>
+                    </button>
+                    <span class="ms-1">{{ answer.like_count }}</span>
+            </div>
+            <div class="col-10">
+
+              <div class="question-text">
+                {{ answer.text }}
+              </div>
+                <div class="form-check mt-5">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Correct
+                  </label>
+                </div>
+
+            </div>
+          </div>
+        </div>
